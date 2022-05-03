@@ -1,0 +1,188 @@
+[
+	{
+		"inputs": [
+			{ "internalType": "address", "name": "_owner", "type": "address" },
+			{ "internalType": "bool", "name": "_NEED_WHITELIST", "type": "bool" },
+			{ "internalType": "uint256", "name": "_TokenCost", "type": "uint256" },
+			{ "internalType": "address", "name": "_BuyToken", "type": "address" },
+			{ "internalType": "address", "name": "_SellToken", "type": "address" },
+			{ "internalType": "uint256[]", "name": "timeLim", "type": "uint256[]" },
+			{ "internalType": "uint256[]", "name": "capLim", "type": "uint256[]" },
+			{ "internalType": "uint256[]", "name": "costLim", "type": "uint256[]" }
+		],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [{ "internalType": "address[]", "name": "_white", "type": "address[]" }],
+		"name": "AddToWhiteList",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "BuyToken",
+		"outputs": [{ "internalType": "contract IERC20", "name": "", "type": "address" }],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "CLOSE",
+		"outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{ "inputs": [], "name": "Claim", "outputs": [], "stateMutability": "nonpayable", "type": "function" },
+	{
+		"inputs": [],
+		"name": "END",
+		"outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "End",
+		"outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{ "inputs": [], "name": "EndAll", "outputs": [], "stateMutability": "payable", "type": "function" },
+	{
+		"inputs": [],
+		"name": "FINISH",
+		"outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{ "inputs": [], "name": "Finish", "outputs": [], "stateMutability": "nonpayable", "type": "function" },
+	{
+		"inputs": [],
+		"name": "HardCap",
+		"outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "NEED_WHITELIST",
+		"outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [{ "internalType": "uint256", "name": "amountToSell", "type": "uint256" }],
+		"name": "Participate",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{ "inputs": [], "name": "ParticipateViaCoins", "outputs": [], "stateMutability": "payable", "type": "function" },
+	{
+		"inputs": [],
+		"name": "Participates",
+		"outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [{ "internalType": "address[]", "name": "_black", "type": "address[]" }],
+		"name": "RemoveFromWhitelist",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "START",
+		"outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "SellToken",
+		"outputs": [{ "internalType": "contract IERC20", "name": "", "type": "address" }],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [{ "internalType": "address", "name": "newOwner", "type": "address" }],
+		"name": "SetOwner",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "SoftCap",
+		"outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "Start",
+		"outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "TokenCost",
+		"outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "VIA_COIN",
+		"outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [{ "internalType": "address", "name": "", "type": "address" }],
+		"name": "balances",
+		"outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "owner",
+		"outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "time_of_full_end",
+		"outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "user_max_limit",
+		"outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "user_min_limit",
+		"outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [{ "internalType": "address", "name": "", "type": "address" }],
+		"name": "whitelist",
+		"outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
