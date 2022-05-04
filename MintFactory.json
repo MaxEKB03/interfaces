@@ -7,6 +7,13 @@
 		"type": "event"
 	},
 	{
+		"inputs": [{ "internalType": "address", "name": "admin", "type": "address" }],
+		"name": "AddAdmin",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
 		"inputs": [
 			{ "internalType": "uint256", "name": "template", "type": "uint256" },
 			{ "internalType": "uint256", "name": "_initialAmount", "type": "uint256" },
@@ -16,6 +23,13 @@
 		],
 		"name": "CreateToken",
 		"outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [{ "internalType": "address", "name": "admin", "type": "address" }],
+		"name": "RemoveAdmin",
+		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
 	},
@@ -46,7 +60,7 @@
 	{
 		"inputs": [],
 		"name": "getSupports",
-		"outputs": [{ "internalType": "address[]", "name": "", "type": "address[]" }],
+		"outputs": [{ "internalType": "string[]", "name": "", "type": "string[]" }],
 		"stateMutability": "view",
 		"type": "function"
 	},

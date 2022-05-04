@@ -2,7 +2,7 @@
 	"testnet": {
 		"MaxEKB": "0xc74cF930b40A0Afb8bf5397Fd816329fb8c27C2E",
 		"CreateToken": {
-			"MintFactory": "0xb09948986fEc59e38976C1A32b23e3146aD1de72",
+			"MintFactory": "0xD64160BD80DD3322b9b42041AFCc6918220b158c",
 			"Factory_Simple": "0x46Ee809346eC7B83aB0bd42A274943258BF53a9A",
 			"Factory_Pauseable": "0xFC14BeB27CcA0fd8D6E89Ba17047B6616384FFcD",
 			"Factory_Mint_d_Burn": "0xFCEba8E50F9E49311e63aFe2C656c712bC02bf93"
