@@ -2,18 +2,18 @@
 	"testnet": {
 		"MaxEKB": "0xc74cF930b40A0Afb8bf5397Fd816329fb8c27C2E",
 		"CreateToken": {
-			"MintFactory": "0xD64160BD80DD3322b9b42041AFCc6918220b158c",
-			"Factory_Simple": "0x46Ee809346eC7B83aB0bd42A274943258BF53a9A",
-			"Factory_Pauseable": "0xFC14BeB27CcA0fd8D6E89Ba17047B6616384FFcD",
-			"Factory_Mint_d_Burn": "0xFCEba8E50F9E49311e63aFe2C656c712bC02bf93"
+			"MintFactory": "0xF0F2FdBda465269C232A2B4a5A6378CA80e46c81",
+			"Factory_Simple": "0x3B873E5C0ca21f9Ff71Ba565d4C4F0ED5f655aB0",
+			"Factory_Pauseable": "0xa9Ee5C16b3d3a2055e21E75281277a36633fFE8D",
+			"Factory_Mint_d_Burn": "0xf72B75dfB3Cdac34E081eE988C7037f9C5C7Ef99"
 		},
 		"tokens": {
 			"Simple": "0x1e17f2F72c5C2188017747F3E3b700c4E58584B7",
 			"Pauseable": "0xe3f257bD762234c5Abe11122C3D9a61D5632Fe3b",
 			"Mint_d_Burn": "0x90B27391FE9bAB5564E1055f2F9E6Acece5975A9"
 		},
-		"launchpad": {
-			"Launchpad_Manager": "0x467Ca1E3faa7d638E9A4Dfa10Ce0EB71436a7944"
+		"token_sale": {
+			"TokenSale_Manager": "0x652ab415030F1e4416fA2D4E8Da2f276048834e0"
 		}
 	}
 }

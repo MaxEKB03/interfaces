@@ -1,0 +1,113 @@
+contract: MintFactory
+address: 0xD64160BD80DD3322b9b42041AFCc6918220b158c
+functions:
+    write:
+        // admin functional
+        createToken:
+            input:
+                uint248 template,
+                uint _initialAmount, 
+                string _tokenName, 
+                uint8 _decimalUnits, 
+                string _tokenSymbol
+            output:
+                events: NewToken(address)
+        addSupport:
+            input: 
+                address conAddr,
+                string name
+            output: 
+                events: AddSupport(address, string)
+        deleteSupport:
+            input: 
+                address conAddr, 
+                string name
+            output: 
+                events: DeleteSupport(address, string)
+    read:
+        getSupports:
+            input: null
+            output: string[]
+
+
+contract: TokenSale_Manager
+address: 0xD64160BD80DD3322b9b42041AFCc6918220b158c
+functions:
+    write:
+        createTokenSale:
+            input:
+                address owner, 
+                bool NEED_WHITELIST,
+                uint TokenCost,
+                address _BuyToken, 
+                address _SellToken, 
+                uint[] timeLim,
+                uint[] capLim,
+                uint[] costLim,
+                uint allowance
+            output:
+                events: NewTokenSale(address)
+    read:
+        // pubic vars invokes like a read function, but without any args
+        vars:
+            TokenSales: address[] //TokenSales addresses
+
+contract: TokenSale
+address: any // create by TokenSale_Manager on createTokenSale
+functions:
+    write:
+        // admin
+        addToWhiteList:
+            input: address[]
+            output: null
+        removeFromWhitelist:
+            input: address[]
+            output: null
+        finish: // when End > now or Participates > SoftCap
+            input: null
+            output: null
+        // public
+        participate:
+            input: uint amountToSel
+            output: null
+        participateViaCoin: //if sell token is 0x00..... this is BNB
+            value: uint amountToSel
+            output: null
+        claim:
+            input: null
+            output: null
+    read:
+        // public array, but it mapping
+        mappings:
+            whitelist: (address => uint)
+            balances: (address => uint)
+        vars:
+            // tokens
+            SellToken: address
+            BuyToken: address
+            // boolean
+            NEED_WHITELIST: bool
+            START: bool
+            END: bool
+            CLOSE: bool
+            FINISH: bool
+            VIA_COIN: bool
+            // uint params
+
+            //timetamps
+            Start: uint
+            End: uint
+
+            TokenCost: uint
+
+            SoftCap: uint
+            HardCap: uint
+
+            // to buy count limits
+            user_min_limit: uint
+            user_max_limit: uint 
+
+            time_of_full_end: uint // 1 mounth after finish
+            Participates: uint // all buied tokens
+
+        

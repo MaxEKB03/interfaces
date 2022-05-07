@@ -14,8 +14,8 @@
 		"type": "constructor"
 	},
 	{
-		"inputs": [{ "internalType": "address[]", "name": "_white", "type": "address[]" }],
-		"name": "AddToWhiteList",
+		"inputs": [{ "internalType": "address", "name": "admin", "type": "address" }],
+		"name": "AddAdmin",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -34,7 +34,6 @@
 		"stateMutability": "view",
 		"type": "function"
 	},
-	{ "inputs": [], "name": "Claim", "outputs": [], "stateMutability": "nonpayable", "type": "function" },
 	{
 		"inputs": [],
 		"name": "END",
@@ -49,7 +48,6 @@
 		"stateMutability": "view",
 		"type": "function"
 	},
-	{ "inputs": [], "name": "EndAll", "outputs": [], "stateMutability": "payable", "type": "function" },
 	{
 		"inputs": [],
 		"name": "FINISH",
@@ -57,7 +55,6 @@
 		"stateMutability": "view",
 		"type": "function"
 	},
-	{ "inputs": [], "name": "Finish", "outputs": [], "stateMutability": "nonpayable", "type": "function" },
 	{
 		"inputs": [],
 		"name": "HardCap",
@@ -73,14 +70,6 @@
 		"type": "function"
 	},
 	{
-		"inputs": [{ "internalType": "uint256", "name": "amountToSell", "type": "uint256" }],
-		"name": "Participate",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{ "inputs": [], "name": "ParticipateViaCoins", "outputs": [], "stateMutability": "payable", "type": "function" },
-	{
 		"inputs": [],
 		"name": "Participates",
 		"outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
@@ -88,8 +77,8 @@
 		"type": "function"
 	},
 	{
-		"inputs": [{ "internalType": "address[]", "name": "_black", "type": "address[]" }],
-		"name": "RemoveFromWhitelist",
+		"inputs": [{ "internalType": "address", "name": "admin", "type": "address" }],
+		"name": "RemoveAdmin",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -145,6 +134,13 @@
 	},
 	{
 		"inputs": [{ "internalType": "address", "name": "", "type": "address" }],
+		"name": "admins",
+		"outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [{ "internalType": "address", "name": "", "type": "address" }],
 		"name": "balances",
 		"outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
 		"stateMutability": "view",
@@ -184,5 +180,30 @@
 		"outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
 		"stateMutability": "view",
 		"type": "function"
-	}
+	},
+	{
+		"inputs": [{ "internalType": "address[]", "name": "_white", "type": "address[]" }],
+		"name": "addToWhiteList",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [{ "internalType": "address[]", "name": "_black", "type": "address[]" }],
+		"name": "removeFromWhitelist",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [{ "internalType": "uint256", "name": "amountToSell", "type": "uint256" }],
+		"name": "participate",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{ "inputs": [], "name": "participateViaCoins", "outputs": [], "stateMutability": "payable", "type": "function" },
+	{ "inputs": [], "name": "claim", "outputs": [], "stateMutability": "nonpayable", "type": "function" },
+	{ "inputs": [], "name": "endAll", "outputs": [], "stateMutability": "payable", "type": "function" },
+	{ "inputs": [], "name": "finish", "outputs": [], "stateMutability": "nonpayable", "type": "function" }
 ]
