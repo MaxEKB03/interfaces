@@ -3,15 +3,18 @@ address: 0xD64160BD80DD3322b9b42041AFCc6918220b158c
 functions:
     write:
         // admin functional
+        // главное
         createToken:
             input:
-                uint248 template,
+                uint248 template, // индекс элемента масива из getSupports
+                address owner,
                 uint _initialAmount, 
                 string _tokenName, 
                 uint8 _decimalUnits, 
                 string _tokenSymbol
             output:
                 events: NewToken(address)
+        // необязательно
         addSupport:
             input: 
                 address conAddr,
@@ -25,11 +28,16 @@ functions:
             output: 
                 events: DeleteSupport(address, string)
     read:
+        // главное
+        // получить масив названий шаблонов
         getSupports:
             input: null
             output: string[]
 
 
+
+/// БОЛЬШИЕ ИЗМЕНЕНИЯ ГРЯДУТ
+/// Но по этому адресу работает
 contract: TokenSale_Manager
 address: 0xD64160BD80DD3322b9b42041AFCc6918220b158c
 functions:

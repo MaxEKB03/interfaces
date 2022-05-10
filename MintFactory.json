@@ -1,5 +1,9 @@
 [
-	{ "inputs": [], "stateMutability": "nonpayable", "type": "constructor" },
+	{
+		"inputs": [{ "internalType": "address", "name": "_ownable", "type": "address" }],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
 	{
 		"anonymous": false,
 		"inputs": [
@@ -21,36 +25,8 @@
 	{
 		"anonymous": false,
 		"inputs": [{ "indexed": false, "internalType": "address", "name": "token", "type": "address" }],
-		"name": "newToken",
+		"name": "NewToken",
 		"type": "event"
-	},
-	{
-		"inputs": [{ "internalType": "address", "name": "admin", "type": "address" }],
-		"name": "AddAdmin",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [{ "internalType": "address", "name": "admin", "type": "address" }],
-		"name": "RemoveAdmin",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [{ "internalType": "address", "name": "newOwner", "type": "address" }],
-		"name": "SetOwner",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [{ "internalType": "address", "name": "", "type": "address" }],
-		"name": "admins",
-		"outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
-		"stateMutability": "view",
-		"type": "function"
 	},
 	{
 		"inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
@@ -60,16 +36,16 @@
 		"type": "function"
 	},
 	{
-		"inputs": [],
-		"name": "owner",
-		"outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+		"inputs": [{ "internalType": "address", "name": "", "type": "address" }],
+		"name": "templatesName",
+		"outputs": [{ "internalType": "string", "name": "", "type": "string" }],
 		"stateMutability": "view",
 		"type": "function"
 	},
 	{
-		"inputs": [{ "internalType": "address", "name": "", "type": "address" }],
-		"name": "templatesName",
-		"outputs": [{ "internalType": "string", "name": "", "type": "string" }],
+		"inputs": [],
+		"name": "test",
+		"outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
 		"stateMutability": "view",
 		"type": "function"
 	},
@@ -93,6 +69,7 @@
 	{
 		"inputs": [
 			{ "internalType": "uint248", "name": "template", "type": "uint248" },
+			{ "internalType": "address", "name": "_owner", "type": "address" },
 			{ "internalType": "uint256", "name": "_initialAmount", "type": "uint256" },
 			{ "internalType": "string", "name": "_tokenName", "type": "string" },
 			{ "internalType": "uint8", "name": "_decimalUnits", "type": "uint8" },

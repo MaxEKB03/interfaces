@@ -8,8 +8,8 @@
 			"Factory_Mint_d_Burn": "0xf72B75dfB3Cdac34E081eE988C7037f9C5C7Ef99"
 		},
 		"tokens": {
-			"Simple": "0x1e17f2F72c5C2188017747F3E3b700c4E58584B7",
-			"Pauseable": "0xe3f257bD762234c5Abe11122C3D9a61D5632Fe3b",
+			"Simple": "",
+			"Pauseable": "00x1e17f2F72c5C2188017747F3E3b700c4E58584B7xe3f257bD762234c5Abe11122C3D9a61D5632Fe3b",
 			"Mint_d_Burn": "0x90B27391FE9bAB5564E1055f2F9E6Acece5975A9"
 		},
 		"token_sale": {
