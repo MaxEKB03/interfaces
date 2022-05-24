@@ -43,13 +43,6 @@
 		"type": "function"
 	},
 	{
-		"inputs": [],
-		"name": "test",
-		"outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
 		"inputs": [
 			{ "internalType": "address", "name": "template", "type": "address" },
 			{ "internalType": "string", "name": "name", "type": "string" }

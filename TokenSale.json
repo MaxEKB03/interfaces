@@ -2,91 +2,23 @@
 	{
 		"inputs": [
 			{ "internalType": "address", "name": "_owner", "type": "address" },
-			{ "internalType": "bool", "name": "_NEED_WHITELIST", "type": "bool" },
-			{ "internalType": "uint256", "name": "_TokenCost", "type": "uint256" },
+			{ "internalType": "address", "name": "_admin", "type": "address" },
 			{ "internalType": "address", "name": "_BuyToken", "type": "address" },
 			{ "internalType": "address", "name": "_SellToken", "type": "address" },
-			{ "internalType": "uint256[]", "name": "timeLim", "type": "uint256[]" },
-			{ "internalType": "uint256[]", "name": "capLim", "type": "uint256[]" },
-			{ "internalType": "uint256[]", "name": "costLim", "type": "uint256[]" }
+			{ "internalType": "uint256", "name": "_percentToClaim", "type": "uint256" },
+			{ "internalType": "uint256", "name": "_percentToReward", "type": "uint256" },
+			{ "internalType": "uint256", "name": "_percentToRevert", "type": "uint256" },
+			{ "internalType": "bool[]", "name": "_NEED_WHITELIST", "type": "bool[]" },
+			{ "internalType": "uint256[][]", "name": "args", "type": "uint256[][]" },
+			{ "internalType": "address", "name": "_manager", "type": "address" }
 		],
 		"stateMutability": "nonpayable",
 		"type": "constructor"
 	},
 	{
-		"inputs": [{ "internalType": "address", "name": "admin", "type": "address" }],
-		"name": "AddAdmin",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
 		"inputs": [],
 		"name": "BuyToken",
 		"outputs": [{ "internalType": "contract IERC20", "name": "", "type": "address" }],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "CLOSE",
-		"outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "END",
-		"outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "End",
-		"outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "FINISH",
-		"outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "HardCap",
-		"outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "NEED_WHITELIST",
-		"outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "Participates",
-		"outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [{ "internalType": "address", "name": "admin", "type": "address" }],
-		"name": "RemoveAdmin",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "START",
-		"outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
 		"stateMutability": "view",
 		"type": "function"
 	},
@@ -98,44 +30,9 @@
 		"type": "function"
 	},
 	{
-		"inputs": [{ "internalType": "address", "name": "newOwner", "type": "address" }],
-		"name": "SetOwner",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
 		"inputs": [],
-		"name": "SoftCap",
-		"outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "Start",
-		"outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "TokenCost",
-		"outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "VIA_COIN",
-		"outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [{ "internalType": "address", "name": "", "type": "address" }],
-		"name": "admins",
-		"outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+		"name": "admin",
+		"outputs": [{ "internalType": "address", "name": "", "type": "address" }],
 		"stateMutability": "view",
 		"type": "function"
 	},
@@ -143,6 +40,23 @@
 		"inputs": [{ "internalType": "address", "name": "", "type": "address" }],
 		"name": "balances",
 		"outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{ "internalType": "address", "name": "", "type": "address" },
+			{ "internalType": "uint256", "name": "", "type": "uint256" }
+		],
+		"name": "balances_on_stage",
+		"outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "manager",
+		"outputs": [{ "internalType": "contract Manager", "name": "", "type": "address" }],
 		"stateMutability": "view",
 		"type": "function"
 	},
@@ -155,29 +69,46 @@
 	},
 	{
 		"inputs": [],
-		"name": "time_of_full_end",
+		"name": "percentToClaim",
 		"outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
 		"stateMutability": "view",
 		"type": "function"
 	},
 	{
 		"inputs": [],
-		"name": "user_max_limit",
+		"name": "percentToRevert",
 		"outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
 		"stateMutability": "view",
 		"type": "function"
 	},
 	{
 		"inputs": [],
-		"name": "user_min_limit",
+		"name": "percentToReward",
 		"outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
 		"stateMutability": "view",
 		"type": "function"
 	},
 	{
-		"inputs": [{ "internalType": "address", "name": "", "type": "address" }],
+		"inputs": [
+			{ "internalType": "address", "name": "", "type": "address" },
+			{ "internalType": "uint256", "name": "", "type": "uint256" }
+		],
 		"name": "whitelist",
 		"outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [{ "internalType": "address", "name": "addr", "type": "address" }],
+		"name": "test",
+		"outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getStage",
+		"outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
 		"stateMutability": "view",
 		"type": "function"
 	},
@@ -197,13 +128,19 @@
 	},
 	{
 		"inputs": [{ "internalType": "uint256", "name": "amountToSell", "type": "uint256" }],
-		"name": "participate",
-		"outputs": [],
-		"stateMutability": "nonpayable",
+		"name": "getBuyAmount",
+		"outputs": [{ "internalType": "uint256", "name": "amountToBuy", "type": "uint256" }],
+		"stateMutability": "view",
 		"type": "function"
 	},
-	{ "inputs": [], "name": "participateViaCoins", "outputs": [], "stateMutability": "payable", "type": "function" },
+	{
+		"inputs": [{ "internalType": "uint256", "name": "amountToSell", "type": "uint256" }],
+		"name": "participate",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
 	{ "inputs": [], "name": "claim", "outputs": [], "stateMutability": "nonpayable", "type": "function" },
-	{ "inputs": [], "name": "endAll", "outputs": [], "stateMutability": "payable", "type": "function" },
-	{ "inputs": [], "name": "finish", "outputs": [], "stateMutability": "nonpayable", "type": "function" }
+	{ "inputs": [], "name": "revertInvestitions", "outputs": [], "stateMutability": "nonpayable", "type": "function" },
+	{ "inputs": [], "name": "getReward", "outputs": [], "stateMutability": "nonpayable", "type": "function" }
 ]

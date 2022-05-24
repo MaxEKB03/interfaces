@@ -1,31 +1,17 @@
 [
-	{ "inputs": [], "stateMutability": "nonpayable", "type": "constructor" },
+	{
+		"inputs": [
+			{ "internalType": "address", "name": "_ownable", "type": "address" },
+			{ "internalType": "address", "name": "_saleFactory", "type": "address" }
+		],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
 	{
 		"anonymous": false,
-		"inputs": [{ "indexed": false, "internalType": "address", "name": "TokenSale", "type": "address" }],
+		"inputs": [{ "indexed": false, "internalType": "address", "name": "tokenSale", "type": "address" }],
 		"name": "NewTokenSale",
 		"type": "event"
-	},
-	{
-		"inputs": [{ "internalType": "address", "name": "admin", "type": "address" }],
-		"name": "AddAdmin",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [{ "internalType": "address", "name": "admin", "type": "address" }],
-		"name": "RemoveAdmin",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [{ "internalType": "address", "name": "newOwner", "type": "address" }],
-		"name": "SetOwner",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
 	},
 	{
 		"inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
@@ -36,29 +22,35 @@
 	},
 	{
 		"inputs": [{ "internalType": "address", "name": "", "type": "address" }],
-		"name": "admins",
+		"name": "subs",
 		"outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
 		"stateMutability": "view",
 		"type": "function"
 	},
 	{
-		"inputs": [],
-		"name": "owner",
-		"outputs": [{ "internalType": "address", "name": "", "type": "address" }],
-		"stateMutability": "view",
+		"inputs": [{ "internalType": "address", "name": "newSub", "type": "address" }],
+		"name": "addToSubs",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [{ "internalType": "address", "name": "newSub", "type": "address" }],
+		"name": "deleteFromSubs",
+		"outputs": [],
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
 		"inputs": [
-			{ "internalType": "address", "name": "owner", "type": "address" },
-			{ "internalType": "bool", "name": "NEED_WHITELIST", "type": "bool" },
-			{ "internalType": "uint256", "name": "TokenCost", "type": "uint256" },
-			{ "internalType": "address", "name": "_BuyToken", "type": "address" },
-			{ "internalType": "address", "name": "_SellToken", "type": "address" },
-			{ "internalType": "uint256[]", "name": "timeLim", "type": "uint256[]" },
-			{ "internalType": "uint256[]", "name": "capLim", "type": "uint256[]" },
-			{ "internalType": "uint256[]", "name": "costLim", "type": "uint256[]" },
-			{ "internalType": "uint256", "name": "allowance", "type": "uint256" }
+			{ "internalType": "address", "name": "_owner", "type": "address" },
+			{ "internalType": "address", "name": "buyToken", "type": "address" },
+			{ "internalType": "address", "name": "sellToken", "type": "address" },
+			{ "internalType": "uint256", "name": "_percentToClaim", "type": "uint256" },
+			{ "internalType": "uint256", "name": "_percentToReward", "type": "uint256" },
+			{ "internalType": "uint256", "name": "_percentToRevert", "type": "uint256" },
+			{ "internalType": "bool[]", "name": "NEED_WHITELIST", "type": "bool[]" },
+			{ "internalType": "uint256[][]", "name": "args", "type": "uint256[][]" }
 		],
 		"name": "createTokenSale",
 		"outputs": [],
